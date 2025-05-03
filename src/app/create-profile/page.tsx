@@ -2,7 +2,7 @@ import { currentUser } from '@clerk/nextjs/server';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'ShitPoster - Create profile',
+  title: 'Music-Reviews - Create profile',
   description: 'Create Profile',
 };
 
