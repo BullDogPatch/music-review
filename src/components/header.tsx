@@ -16,10 +16,14 @@ const Header = () => {
       <div>
         <SignedOut>
           <SignInButton>
-            <button className='m-2 cursor-pointer'>Sign in</button>
+            <button className='m-2 cursor-pointer bg-gray-800 px-2 py-1 rounded-sm hover:bg-gray-700'>
+              Sign in
+            </button>
           </SignInButton>
           <SignUpButton>
-            <button className='m-2 cursor-pointer'>Sign Up</button>
+            <button className='m-2 cursor-pointer bg-gray-800 px-2 py-1 rounded-sm hover:bg-gray-700'>
+              Sign Up
+            </button>
           </SignUpButton>
         </SignedOut>
         <SignedIn>
