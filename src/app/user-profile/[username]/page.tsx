@@ -1,5 +1,6 @@
 import { fetchUser } from '@/app/utils/api';
 import { User } from '@/utils/types';
+import { notFound } from 'next/navigation';
 
 interface Params {
   params: Promise<{ username: string }>;
@@ -19,7 +20,8 @@ export async function generateMetadata({ params }: Params) {
 const UserProfilePage = async ({ params }: Params) => {
   const { username } = await params;
   const user: User = await fetchUser(username);
-  console.log(user?.username);
+  if (!user) notFound();
+
   return (
     <div>
       <p>
