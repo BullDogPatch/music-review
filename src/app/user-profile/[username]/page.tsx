@@ -1,4 +1,4 @@
-import { fetchUser } from '@/app/utils/api';
+import { fetchUser } from '@/utils/api';
 import { User } from '@/utils/types';
 import { notFound } from 'next/navigation';
 
