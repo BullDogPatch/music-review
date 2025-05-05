@@ -1,4 +1,5 @@
 import { db } from './dbConnection';
+import { Post } from './types';
 
 export const fetchUser = async (username: string) => {
   const user = await db.query(
@@ -6,4 +7,19 @@ export const fetchUser = async (username: string) => {
     [username]
   );
   return user.rows[0];
+};
+
+export const fetchPostsByUsername = async (username: string) => {
+  const posts = await db.query(
+    `
+    SELECT up.id, up.title, up.description, up.image, up.created_at, u.username, u.clerk_id
+    FROM music_user_posts up
+    JOIN music_app_users u ON up.user_id = u.id
+    WHERE u.username = $1
+    ORDER BY up.created_at DESC
+    `,
+    [username]
+  );
+
+  return posts.rows;
 };
