@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className='flex justify-between items-center p-6 border-b-2 border-blue-600 mb-7'>
       <Link href='/'>
-        <h1 className='font-bold text-2xl'>Music-Reviews</h1>
+        <h1 className='font-bold text-2xl'>BandReviews</h1>
       </Link>
       <div>
         <SignedOut>

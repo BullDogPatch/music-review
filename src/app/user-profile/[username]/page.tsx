@@ -43,6 +43,7 @@ const UserProfilePage = async ({ params }: Params) => {
               <Link href='/create-post'>Create Post</Link>
             </div>
           ) : (
+            posts.length &&
             posts.map((post) => <SinglePost key={post.id} post={post} />)
           )}
         </div>
