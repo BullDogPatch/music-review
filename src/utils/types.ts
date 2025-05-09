@@ -12,4 +12,5 @@ export interface Post {
   image: string;
   description: string;
   likes: number;
+  created_at: string;
 }
