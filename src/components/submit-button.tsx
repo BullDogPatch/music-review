@@ -6,7 +6,7 @@ import { Button } from './ui/button';
 const SubmitButton = ({ text }: { text: string }) => {
   const { pending } = useFormStatus();
   return (
-    <Button className='bg-slate-950 text-white' type='submit'>
+    <Button className='bg-slate-950 text-white cursor-pointer' type='submit'>
       {pending ? 'Submitting...' : text}
     </Button>
   );

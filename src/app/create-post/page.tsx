@@ -6,13 +6,13 @@ const CreatePostPage = async () => {
   const user = await currentUser();
 
   return (
-    <section className='min-h-screen flex items-center justify-center  px-4 py-12'>
+    <section className=' w-[90%] md:w-[50%] flex items-center justify-center  px-4 py-12'>
       <form
         action={createPost}
-        className='w-full sm:max-w-md  shadow-xl rounded-2xl p-6 sm:p-8 space-y-6'
+        className='w-full shadow-xl rounded-2xl p-6 sm:p-8 space-y-6'
       >
         <h1 className='text-2xl sm:text-3xl font-bold text-center text-foreground'>
-          Create a post
+          Tell us who you went to see
         </h1>
 
         <input type='hidden' name='clerk_id' value={user?.id} />
