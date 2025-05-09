@@ -9,6 +9,11 @@ export const fetchUser = async (username: string) => {
   return user.rows[0];
 };
 
+export const fetchAllPosts = async () => {
+  const { rows } = await db.query(`SELECT * FROM music_user_posts`);
+  return rows;
+};
+
 export const fetchPostsByUsername = async (username: string) => {
   const posts = await db.query(
     `
