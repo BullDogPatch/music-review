@@ -6,6 +6,7 @@ import {
   UserButton,
 } from '@clerk/nextjs';
 import Link from 'next/link';
+import { FaPlus } from 'react-icons/fa';
 
 const Header = () => {
   return (
@@ -28,6 +29,12 @@ const Header = () => {
         </SignedOut>
         <SignedIn>
           <div className='flex items-center'>
+            <Link href='/create-post'>
+              <button className='flex justify-center items-center font-bold bg-gray-600 rounded-sm px-2 py-1 mr-2 cursor-pointer'>
+                <FaPlus className='md:mr-1' />
+                <span className='hidden md:block'>Create</span>
+              </button>
+            </Link>
             <UserButton />
           </div>
         </SignedIn>
