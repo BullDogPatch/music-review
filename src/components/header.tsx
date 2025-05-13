@@ -30,7 +30,7 @@ const Header = () => {
         <SignedIn>
           <div className='flex items-center'>
             <Link href='/create-post'>
-              <button className='flex justify-center items-center font-bold bg-gray-600 rounded-sm px-2 py-1 mr-2 cursor-pointer'>
+              <button className='flex justify-center items-center font-bold bg-gray-600 rounded-sm px-2 py-2 mr-2 cursor-pointer'>
                 <FaPlus className='md:mr-1' />
                 <span className='hidden md:block'>Create</span>
               </button>
