@@ -40,7 +40,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Header />
-            <main className='min-h-screen flex justify-center'>{children}</main>
+            <main>{children}</main>
           </ThemeProvider>
         </body>
       </html>

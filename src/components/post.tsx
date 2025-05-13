@@ -9,7 +9,7 @@ interface Params {
 const SinglePost = ({ post }: Params) => {
   return (
     <Link href={`/post/${post.id}`}>
-      <li className='list-none w-[90%] mx-auto my-4 p-3 md:p-6 bg-blue-950 hover:bg-blue-900 rounded-2xl shadow-md transition-colors duration-200'>
+      <li className='list-none w-[90%] sm:w-[60%] mx-auto my-4 p-3 md:p-6 bg-blue-950 hover:bg-blue-900 rounded-2xl shadow-md transition-colors duration-200'>
         <h2 className='text-base md:text-xl font-semibold text-white mb-2'>
           {post.title}
         </h2>
