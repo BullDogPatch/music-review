@@ -1,3 +1,4 @@
+import { formatDate } from '@/utils/dateFormatter';
 import { Post } from '@/utils/types';
 
 interface Params {
@@ -6,11 +7,12 @@ interface Params {
 
 const SinglePost = ({ post }: Params) => {
   return (
-    <div>
+    <li className=''>
       <p>{post.title}</p>
-      <img src={post.image} alt='' />
+      <img src={post.image} alt={post.title} />
       <p>{post.description}</p>
-    </div>
+      <p>{formatDate(post.created_at)}</p>
+    </li>
   );
 };
 
